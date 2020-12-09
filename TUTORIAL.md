@@ -97,7 +97,7 @@ git clone https://github.com/ansible-collections/ansible_collections_google.git 
 
 Next, run the compiler:
 ```bash
-bundle exec compiler -p products/pubsub -e ansible -o build/ansible
+ruby compiler.rb -p products/pubsub -e ansible -o build
 ```
 
 This command tells us to run the compiler for the pubsub API, and generate Ansible into the
