@@ -85,27 +85,17 @@ Now, let's compile those changes.
 Since we're running in Cloud Shell, this command will make sure we connect to GitHub via HTTPS
 instead of SSH. You will probably not have to do this in your typical development environment.
 
-First, run `bundle install` to make sure all ruby dependencies are available:
-```bash
-bundle install
-```
-
-Then, check out a copy of Ansible's GCP collection to a folder called `build/ansible`.
-```bash
-git clone https://github.com/ansible-collections/ansible_collections_google.git ./build/ansible
-```
-
-Next, run the compiler:
+Run the compiler:
 ```bash
 ruby compiler.rb -p products/pubsub -e ansible -o build
 ```
 
 This command tells us to run the compiler for the pubsub API, and generate Ansible into the
-`build/ansible` directory.
+`build/build/plugins/modules` directory.
 
 Let's see our changes! Navigate to the Ansible submodule and run `git diff` to see what changed:
 ```bash
-cd build/build/plugins/modules/ && git diff
+cd build/build/plugins/modules/, view gcp_pubsub_topic.py
 ```
 
 ## Congratulations!
