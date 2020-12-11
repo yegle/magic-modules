@@ -105,7 +105,7 @@ This command tells us to run the compiler for the pubsub API, and generate Ansib
 
 Let's see our changes! Navigate to the Ansible submodule and run `git diff` to see what changed:
 ```bash
-cd build/ansible && git diff
+cd build/build/plugins/modules/ && git diff
 ```
 
 ## Congratulations!
