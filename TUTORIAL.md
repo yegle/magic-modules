@@ -32,7 +32,7 @@ provides metadata about the API, such as name, scopes, and versions.
 ### Resources
 
 Each `api.yaml` file contains a list of resources. A resource is an item in that product,
-such as a PubSub Topic, a Compute Instance, or a GKE Cluster.
+such as a PubSub Subscription, a Compute Instance, or a GKE Cluster.
 Let's
 <walkthrough-editor-select-regex filePath="magic-modules/products/pubsub/api.yaml"
                                  regex="!ruby/object:Api::Resource"
@@ -53,6 +53,8 @@ on the resource that a user might set when creating the resource, or access when
 
 See the [property type fields](https://github.com/GoogleCloudPlatform/magic-modules/blob/master/api/resource.rb#L22)
 for more information about the values that can be set on properties.
+
+All of this information comes from the PubSub Subscription [REST API docs](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions)
 
 ## [provider].yaml
 
@@ -76,7 +78,8 @@ Let's actually make a change. Go back to
 <walkthrough-editor-open-file filePath="magic-modules/products/pubsub/api.yaml"
                               text="products/pubsub/api.yaml">
 </walkthrough-editor-open-file>
-and change the description on the `Topic` resource.
+
+We're going to add in the Topic Resource now.
 
 ## Compiling magic-modules
 
